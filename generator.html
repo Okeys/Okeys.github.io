@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel = "stylesheet" href="assets/css/generator.css">
+    <link rel = "stylesheet" href="assets/css/titul.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;700&display=swap" rel="stylesheet"> 
+
+<!--Генератор, показывается по умолчанию и скрывается по нажатию кнопки
+    для этой части используется generator.css-->
+
+<div class="gen_container" id="gen_cont">
+    <a class="image" href="main.html" cursor:pointer>
+    <img src="assets/images/logo-main.png" width="120" height="120">
+    </a>
+    <div class="gen_info">
+        <h1>Генератор титульных страниц</h1>
+        <p>Заполните все необходимые поля для генерации титульных листов.</p>
+    </div>
+        <li class="input_list">
+            <label for="name">Институт</label>
+            <select name= "element" id="0" placeholder="Институт">
+                <option>Институт информационных технологий</option>
+                <option>Институт кибернетики</option>
+                <option>Институт радиотехнических и телекоммуникационных систем</option>
+                <option>Физико-технологический институт</option>
+                <option>Институт комплексной безопасности и специального приборостроения</option>
+                <option>Институт инновационных технологий и государственного управления</option>
+                <option>Институт экономики и права</option>
+                <option>Институт тонких химических технологий им. М.В. Ломоносова</option>
+            </select>
+            <label for="name">Кафедра</label>
+            <input name= "element" id="1" type="text" placeholder="Кафедра">
+            <label for="name">Дисциплина</label>
+            <input name= "element" id="2" type="text" placeholder="Дисциплина">
+            <label for="name">Группа</label>
+            <input name= "element" id="3" type="text" placeholder="Группа">
+            <label for="name">ФИО студента</label>
+            <input name= "element" id="4" type="text" placeholder="ФИО студента">
+
+            <label for="name">ФИО проверяющего</label>
+            <input name= "element" id="5" type="text" placeholder="ФИО проверяющего">
+            <label for="name">Должность</label>
+            <input name= "element" id="6" type="text" placeholder="Должность">
+
+            <label for="name">ФИО руководителя(не вводить если совпадает с проверяющим)</label>
+            <input name= "element" id="7" type="text" placeholder="ФИО руководителя(не вводить если совпадает с проверяющим)">
+            <label for="name">Должность</label>
+            <input name= "element" id="8" type="text" placeholder="Должность">
+
+            <label for="name">ФИО рецензента(не вводить если нет)</label>
+            <input name= "element" id="9" type="text" placeholder="ФИО рецензента(не вводить если нет)">
+            <label for="name">Должность</label>
+            <input name= "element" id="10" type="text" placeholder="Должность">
+        </li>
+    <button class="gen_button" name="generate" onClick="switch_()">Сгенерировать</button>
+</div>
+</body>
+
+<!--Сам титульник, по умолчанию скрыт и показывается по нажатию кнопки
+    для этой части используется titul.css-->
+
+<div class="titul" id="titul" style="display: none;">
+    <div class="A4" name="page1">
+        <div class="title_head">
+            <img class="logo" src="assets/images/logo.png"></img>
+            <div class="th1">минобрнауки</div>
+            <div class="th2">Федеральное государственное бюджетное образовательное учреждение
+                высшего образования
+            </div>
+            <div class="th3">"МИРЭА  - Российский технологический университет"</div>
+            <div class="th4">рту МИРЭА</div>
+        </div>
+        <div class="title_info">
+            <div class="inst" name="elementT" id="0" >__________</div>
+            <div class="kaf"  name="elementT" id="1" >__________</div>
+            <div class="work_type">ОТЧЁТ ПО КУРСОВОЙ РАБОТЕ</div>
+            <div class="work_type">по дисциплине</div>
+            <div class="work_type" name="elementT" id="2" >"_____________"</div>
+        </div>
+        <div class="stud_data">
+            <div class="group1">Выполнил студент группы</div>
+            <div class="group2" name="elementT" id="3" >_______</div>
+            <div class="group3" name="elementT" id="4" >_______</div>
+            <div class="group4" name="elementT" id="5" >Принял: _______</div>
+            <div class="group5" name="elementT" id="6" >_______</div>
+        </div>
+        <div class="dates">
+            <div class="dates1">Практические работы выполнены: </div>
+            <div></div>
+            <div class="dates2">_____________</div>
+    
+            <div class="dates3">"Зачтено"</div>
+            <div></div>
+            <div class="dates4">_____________</div>
+        </div>
+        <div class="moscow">Москва 2020</div>
+    </div>
+    
+    <div class="A4" name="page 2">
+        <div class="title_head">
+            <img class="logo" src="assets/images/logo.png"></img>
+            <div class="th1">минобрнауки</div>
+            <div class="th2">Федеральное государственное бюджетное образовательное учреждение
+                высшего образования
+            </div>
+            <div class="th3">"МИРЭА  - Российский технологический университет"</div>
+            <div class="th4">рту МИРЭА</div>
+        </div>
+        <div class="title_info">
+            <div class="inst" name="elementT1" id="0" >_______</div>
+            <div class="kaf"  name="elementT1" id="1" >_______</div>
+            <div class="work_type">КУРСОВАЯ РАБОТА</div>
+            <div class="work_type">по дисциплине</div>
+            <div class="work_type" name="elementT1" id="2">"_______"</div>
+        </div>
+    
+        <div class="main_info">
+            <div class="student">
+                <div class="st1">Студент группы</div>
+                <div class="st2"  name="elementT2" id="3" > _______, _______</div>
+                <div class="st3">__________</div>
+            </div>
+            <div class="leader">
+                <div class="ld1">Руководитель работы:</div>
+                <div class="ld2"  name="elementT2" id="7" >__________, __________</div>
+                <div class="ld3">__________</div>
+            </div>
+            <div class="reviewer">
+                <div class="rw1">Рецензент:</div>
+                <div class="rw2"  name="elementT2" id="9" >_______, _______</div>
+                <div class="rw3">__________</div>
+            </div>
+        </div>
+        <div class="dates">
+            <div class="dates1">Работа представлена к защите: </div>
+            <div></div>
+            <div class="dates2">_____________</div>
+    
+            <div class="dates3">Допущен к защите: </div>
+            <div></div>
+            <div class="dates4">_____________</div>
+        </div>
+        <div class="moscow">Москва 2020</div> 
+    </div>
+</div>
+
+<script>
+    function switch_(){
+        var gen = document.getElementById("gen_cont");
+        var tit = document.getElementById("titul");
+        gen.style.display = "none";
+        tit.style.display = "block";
+
+        var el = document.getElementsByName("elementT");
+        var inpt = document.getElementsByName("element");
+        var i = 0;
+
+        for(i = 0; i < 7; i++){
+            el[i].innerHTML= inpt[i].value;
+        }
+
+        el = document.getElementsByName("elementT1");
+        for(i = 0; i < 3; i++){
+            el[i].innerHTML= inpt[i].value;
+        }
+
+        el = document.getElementsByName("elementT2");
+        for(i = 0; i < 3; i++){
+            id_ = Number(el[i].id);
+            if (inpt[id_].value == ""){
+                if (id_ == 7){el[i].innerHTML = inpt[5].value + ", " + inpt[6].value;}
+            }
+            else{el[i].innerHTML = inpt[id_].value + ", " + inpt[id_ + 1].value;}
+        }
+        
+    }
+
+</script>
+</html>
