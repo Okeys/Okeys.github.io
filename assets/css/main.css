@@ -1,8 +1,8 @@
 body
 {
     margin: 0;
-    font-family: 'Teko', sans-serif;
-    font-size: 15px;
+    font-family: 'Roboto',Helvetica,Arial,sans-serif !important;
+    font-size: 16px;
     line-height: 1.6;
     color: #333;
 }
@@ -23,6 +23,7 @@ body
     -webkit-background-size: cover;
     background-size: cover;
 }
+
 
 .intro_inner
 {
@@ -83,7 +84,9 @@ body
 { 
   display: block;
   background-color: whitesmoke;
-  min-width: 9rem;
+  text-transform: initial !important;
+  text-align: center;
+  min-width: 7rem;
 }
 
 .navbar .nav-item .dropdown-menu .dropdown-item
@@ -92,11 +95,25 @@ body
   color: #0070c9;
   position: relative;
 	cursor: pointer;
-	line-height: 20px; /*задаём высоту строки*/
-	text-decoration: none; /*убираем подчёркивание*/
+	line-height: 15px;
+	text-decoration: none;
 }
 .navbar .nav-item .dropdown-menu .dropdown-item:hover
 {
   text-decoration: underline;
   color: #0070c9;
+}
+
+.navbar .nav-item .dropdown-menu .news_drop:hover
+{ 
+  display: block;
+  background-color: whitesmoke;
+  text-transform: initial !important;
+  text-align: center;
+  min-width: 100rem;
+}
+
+.btn
+{
+  margin-right: 1.5px;
 }

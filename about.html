@@ -1,14 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <link rel = "stylesheet" href="assets/css/about.css">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet"> 
-    <center><p>About</p></center>
+  <title>Ознакомительная страница</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+    
+  .carousel-inner img {
+      width: 100%; /* Set width to 100% */
+      margin: auto;
+      min-height:200px;
+  }
+
+  /* Hide the carousel text when the screen is less than 600 pixels wide */
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none; 
+    }
+  }
+      .container
+      {
+          width: 100%; /* Set width to 100% */
+      margin: auto;
+      height:630px;
+      }
+  </style>
 </head>
 <body>
-    <div align="center">
-    <iframe src="https://open.spotify.com/embed/playlist/7hiHya2MpadR8p0vzm4HVv" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="logo" href="main.html" cursor:pointer>
+<img src="assets/images/logo-main.png" width="60" height="60">
+    </a>
     </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="about.html"> Информация о<br> <center> сайте</center> </a></li>
+
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+<div class="container text">    
+  <h3>О нас</h3><br>
+  <div class="row">
+    <div class="col-sm-4">
+
+    </div>
+    <div class="col-sm-4"> 
+
+    </div>
+    <div class="col-sm-4">
+
+    </div>
+  </div>
+</div><br>
+
+<footer class="container-fluid text-center">
+  <p>Спасибо за пользование!</p>
+</footer>
+
 </body>
 </html>

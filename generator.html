@@ -4,15 +4,46 @@
     <meta charset="UTF-8">
     <link rel = "stylesheet" href="assets/css/generator.css">
     <link rel = "stylesheet" href="assets/css/titul.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;700&display=swap" rel="stylesheet"> 
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+        /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    </style>
 <!--Генератор, показывается по умолчанию и скрывается по нажатию кнопки
     для этой части используется generator.css-->
-
-<div class="gen_container" id="gen_cont">
-    <a class="image" href="index.html" cursor:pointer>
-    <img src="assets/images/logo-main.png" width="120" height="120">
+       <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="logo" href="main.html" cursor:pointer>
+<img src="assets/images/logo-main.png" width="60" height="60">
     </a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="generator.html">Генератор <br> <center>Титульных листов</center></a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="gen_container" id="gen_cont">
     <div class="gen_info">
         <h1>Генератор титульных страниц</h1>
         <p>Заполните все необходимые поля для генерации титульных листов.</p>
@@ -29,29 +60,44 @@
                 <option>Институт экономики и права</option>
                 <option>Институт тонких химических технологий им. М.В. Ломоносова</option>
             </select>
+
             <label for="name">Кафедра</label>
             <input name= "element" id="1" type="text" placeholder="Кафедра">
+
+            <label for="name">Отчёт по: </label>
+            <select name= "element" id="2" placeholder="Отчёт по: ">
+                <option>Курсовой работе</option>
+                <option>Лабораторной работе</option>
+                <option>Практической работе</option>
+            </select>
+
             <label for="name">Дисциплина</label>
-            <input name= "element" id="2" type="text" placeholder="Дисциплина">
+            <input name= "element" id="3" type="text" placeholder="Дисциплина">
+
             <label for="name">Группа</label>
-            <input name= "element" id="3" type="text" placeholder="Группа">
+            <input name= "element" id="4" type="text" placeholder="Группа">
+
             <label for="name">ФИО студента</label>
-            <input name= "element" id="4" type="text" placeholder="ФИО студента">
+            <input name= "element" id="5" type="text" placeholder="ФИО студента">
 
             <label for="name">ФИО проверяющего</label>
-            <input name= "element" id="5" type="text" placeholder="ФИО проверяющего">
+            <input name= "element" id="6" type="text" placeholder="ФИО проверяющего">
+
             <label for="name">Должность</label>
-            <input name= "element" id="6" type="text" placeholder="Должность">
+            <input name= "element" id="7" type="text" placeholder="Должность">
 
             <label for="name">ФИО руководителя(не вводить если совпадает с проверяющим)</label>
-            <input name= "element" id="7" type="text" placeholder="ФИО руководителя(не вводить если совпадает с проверяющим)">
+            <input name= "element" id="8" type="text" placeholder="ФИО руководителя(не вводить если совпадает с проверяющим)">
+
             <label for="name">Должность</label>
-            <input name= "element" id="8" type="text" placeholder="Должность">
+            <input name= "element" id="9" type="text" placeholder="Должность">
 
             <label for="name">ФИО рецензента(не вводить если нет)</label>
-            <input name= "element" id="9" type="text" placeholder="ФИО рецензента(не вводить если нет)">
+            <input name= "element" id="10" type="text" placeholder="ФИО рецензента(не вводить если нет)">
+
             <label for="name">Должность</label>
-            <input name= "element" id="10" type="text" placeholder="Должность">
+            <input name= "element" id="11" type="text" placeholder="Должность">
+
         </li>
     <button class="gen_button" name="generate" onClick="switch_()">Сгенерировать</button>
 </div>
@@ -72,18 +118,18 @@
             <div class="th4">рту МИРЭА</div>
         </div>
         <div class="title_info">
-            <div class="inst" name="elementT" id="0" >__________</div>
-            <div class="kaf"  name="elementT" id="1" >__________</div>
-            <div class="work_type">ОТЧЁТ ПО КУРСОВОЙ РАБОТЕ</div>
+            <div class="inst" name="elementT" id="A0" >__________</div>
+            <div class="kaf"  name="elementT" id="A1" >__________</div>
+            <div class="work_type" name="elementT" id="A2">ОТЧЁТ ПО</div>
             <div class="work_type">по дисциплине</div>
-            <div class="work_type" name="elementT" id="2" >"_____________"</div>
+            <div class="work_type" name="elementT" id="A3" >"_____________"</div>
         </div>
         <div class="stud_data">
             <div class="group1">Выполнил студент группы</div>
-            <div class="group2" name="elementT" id="3" >_______</div>
-            <div class="group3" name="elementT" id="4" >_______</div>
-            <div class="group4" name="elementT" id="5" >Принял: _______</div>
-            <div class="group5" name="elementT" id="6" >_______</div>
+            <div class="group2" name="elementT" id="A4" >_______</div>
+            <div class="group3" name="elementT" id="A5" >_______</div>
+            <div class="group4" name="elementT" id="A6" >Принял: _______</div>
+            <div class="group5" name="elementT" id="A7" >_______</div>
         </div>
         <div class="dates">
             <div class="dates1">Практические работы выполнены: </div>
@@ -108,27 +154,27 @@
             <div class="th4">рту МИРЭА</div>
         </div>
         <div class="title_info">
-            <div class="inst" name="elementT1" id="0" >_______</div>
-            <div class="kaf"  name="elementT1" id="1" >_______</div>
-            <div class="work_type">КУРСОВАЯ РАБОТА</div>
+            <div class="inst" name="elementT1" id="B0" >_______</div>
+            <div class="kaf"  name="elementT1" id="B1" >_______</div>
+            <div class="work_type" name="elementT1" id="B2">КУРСОВАЯ РАБОТА</div>
             <div class="work_type">по дисциплине</div>
-            <div class="work_type" name="elementT1" id="2">"_______"</div>
+            <div class="work_type" name="elementT1" id="B3">"_______"</div>
         </div>
     
         <div class="main_info">
             <div class="student">
                 <div class="st1">Студент группы</div>
-                <div class="st2"  name="elementT2" id="3" > _______, _______</div>
+                <div class="st2"  name="elementT2" id="4" > _______, _______</div>
                 <div class="st3">__________</div>
             </div>
             <div class="leader">
                 <div class="ld1">Руководитель работы:</div>
-                <div class="ld2"  name="elementT2" id="7" >__________, __________</div>
+                <div class="ld2"  name="elementT2" id="8" >__________, __________</div>
                 <div class="ld3">__________</div>
             </div>
             <div class="reviewer">
                 <div class="rw1">Рецензент:</div>
-                <div class="rw2"  name="elementT2" id="9" >_______, _______</div>
+                <div class="rw2"  name="elementT2" id="10" >_______, _______</div>
                 <div class="rw3">__________</div>
             </div>
         </div>
@@ -152,28 +198,37 @@
         gen.style.display = "none";
         tit.style.display = "block";
 
-        var el = document.getElementsByName("elementT");
         var inpt = document.getElementsByName("element");
         var i = 0;
+        for(i = 0; i < 11; i++){
+            if (inpt[i].id == "2"){
+                if (inpt[i].value == "Курсовой работе"){document.getElementById("A" + inpt[i].id).innerHTML ="ОТЧЁТ ПО КУРСОВОЙ РАБОТЕ";
+                                                        document.getElementById("B" + inpt[i].id).innerHTML ="КУРСОВАЯ РАБОТА";}
+                if (inpt[i].value == "Лабораторной работе"){document.getElementById("A" + inpt[i].id).innerHTML ="ОТЧЁТ ПО ЛАБОРАТОРНОЙ РАБОТЕ";
+                                                            document.getElementById("B" + inpt[i].id).innerHTML ="ЛАБОРАТОРНАЯ РАБОТА";}
+                if (inpt[i].value == "Практической работе"){document.getElementById("A" + inpt[i].id).innerHTML ="ОТЧЁТ ПО ПРАКТИЧЕСКОЙ РАБОТЕ";
+                                                            document.getElementById("B" + inpt[i].id).innerHTML ="ПРАКТИЧЕСКАЯ РАБОТА";}
+            }
 
-        for(i = 0; i < 7; i++){
-            el[i].innerHTML= inpt[i].value;
-        }
+            else{
+                if (Number(inpt[i].id) <= 7){document.getElementById("A" + inpt[i].id).innerHTML = inpt[i].value;}
+                if(Number(inpt[i].id) <= 3){document.getElementById("B" + inpt[i].id).innerHTML = inpt[i].value;} 
+                }
 
-        el = document.getElementsByName("elementT1");
-        for(i = 0; i < 3; i++){
-            el[i].innerHTML= inpt[i].value;
+                
+                
+
         }
 
         el = document.getElementsByName("elementT2");
         for(i = 0; i < 3; i++){
             id_ = Number(el[i].id);
+
             if (inpt[id_].value == ""){
-                if (id_ == 7){el[i].innerHTML = inpt[5].value + ", " + inpt[6].value;}
+                if (id_ == 8){el[i].innerHTML = inpt[6].value + ", " + inpt[7].value;}
             }
             else{el[i].innerHTML = inpt[id_].value + ", " + inpt[id_ + 1].value;}
         }
-        
     }
 
 </script>

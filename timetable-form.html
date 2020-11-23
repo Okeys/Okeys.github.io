@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Title</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel = "stylesheet" href="assets/css/timetable-form.css">
+        <link rel="stylesheet" href="assets/dist/css/uikit.min.css" />
+        <script src="assets/dist/js/uikit.min.js"></script>
+        <script src="assets/dist/js/uikit-icons.min.js"></script>
+        <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    </head>
+    <body>
+        <form class = "timetable_data">
+            <label for="inputcourse">Курс</label>
+            <span class="uk-badge" uk-toggle="target: #offcanvas-overlay">?</span>
+            <div id="offcanvas-overlay" uk-offcanvas="mode: push">
+            <div class="uk-offcanvas-bar">
+            <button class="uk-offcanvas-close" type="button" uk-close></button>
+                <h3>Что вводить?</h3>
+            <p>Номер курса на котором вы сейчас обучаетесь.</p>
+            </div>
+            </div>
+            <select id="course" class="form-control">
+                <option value="" disabled selected>Выберите свой курс</option>
+                    <option value="1">1 курс</option>
+                    <option value="2">2 курс</option>
+                    <option value="3">3 курс</option>
+                    <option value="4">4 курс</option>
+              </select>
+              <hr class="uk-divider-icon">
+                <label for="group">Группа</label>
+                <span class="uk-badge" uk-toggle="target: #offcanvas-overlay">?</span>
+            <div id="offcanvas-overlay" uk-offcanvas="mode: push">
+            <div class="uk-offcanvas-bar">
+            <button class="uk-offcanvas-close" type="button" uk-close></button>
+                <h3>Что вводить?</h3>
+            <p>Введите свою группу.</p>
+            </div>
+            </div>
+                <input type="text" class="form-control" id="group" placeholder="Введите свою группу" autocomplete="on">
+              <a href="timetable.html" class="btn btn-primary btn-lg btn-block mt-4" type="submit" id="submit" aria-pressed="true">Показать расписание</a>
+        </form>
+        <script src="js/timetable-form.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="assets/dist/js/bootstrap.min.js"></script>
+    </body>
+</html>
